@@ -25,13 +25,32 @@
 /* We start writing out flexbox here. The above is just page setup */
 .container {
 	display: flex;
-	border: 10px solid goldenrod;
-	min-height:  100vh;  /* wrapping at the vertical */
+	border: 10px solid goldenrod;	
 
-	flex-direction: row;            /* default */
-	flex-direction: row-reverse;    /* from right to left in reverse order */
-	flex-direction: column;         /* from up to down */
-	flex-direction: column-reverse; /* from up to down in reverse order */
+	flex-wrap: nowrap;        /* default */
+	flex-wrap: wrap;          /* from 1 to 10 by 3 on the each row */
+	flex-wrap: wrap-reverse;  /* from 10 to 1 by 3 on the each row starting from the down of the page */
 
+	flex-wrap: wrap;
+
+	/* like the snake from up to down */
+	/*height:  100vh;*/
+	flex-direction: column;
+
+	/* from up to down straight */
+	min-height:  100vh;
+	flex-direction: column;
+
+	/* like snake from left to right (with margin) */
+	flex-direction: row;
+}
+
+.box {
+	width: 300px;
+	width: 33.3333333%;  /* wrapping horizontal evenly */
+
+	/*margin: 10px;*/
+
+	/*border: 10px solid lightgrey;*/
 }
 
