@@ -24,6 +24,8 @@
 
 /* We start writing out flexbox here. The above is just page setup */
 .container {
-
+	display: flex;
+	border: 10px solid goldenrod;
+	height:  100vh;
 }
 
