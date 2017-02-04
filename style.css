@@ -26,6 +26,12 @@
 .container {
 	display: flex;
 	border: 10px solid goldenrod;
-	height:  100vh;
+	min-height:  100vh;  /* wrapping at the vertical */
+
+	flex-direction: row;            /* default */
+	flex-direction: row-reverse;    /* from right to left in reverse order */
+	flex-direction: column;         /* from up to down */
+	flex-direction: column-reverse; /* from up to down in reverse order */
+
 }
 
