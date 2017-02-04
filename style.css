@@ -27,30 +27,27 @@
 	display: flex;
 	border: 10px solid goldenrod;	
 
-	flex-wrap: nowrap;        /* default */
-	flex-wrap: wrap;          /* from 1 to 10 by 3 on the each row */
-	flex-wrap: wrap-reverse;  /* from 10 to 1 by 3 on the each row starting from the down of the page */
-
-	flex-wrap: wrap;
-
-	/* like the snake from up to down */
-	/*height:  100vh;*/
-	flex-direction: column;
-
-	/* from up to down straight */
-	min-height:  100vh;
-	flex-direction: column;
-
-	/* like snake from left to right (with margin) */
-	flex-direction: row;
 }
 
 .box {
-	width: 300px;
-	width: 33.3333333%;  /* wrapping horizontal evenly */
-
-	/*margin: 10px;*/
-
-	/*border: 10px solid lightgrey;*/
+	flex: 1;  /* wrapping to whole container */
 }
+
+.box3 {
+	order: 0; /* default */
+	order: 1; /* displaying in the end of the row */
+}
+
+.box7 {
+	order: 2;
+}
+
+.box8 {
+	order: -1;
+}
+.box9 {
+	order: -2;
+}
+
+/* but selecting items by order */
 
