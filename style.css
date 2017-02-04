@@ -4,7 +4,7 @@
 /* Some default styles to make each box visible */
 .box {
 	color: white;
-	font-size: 100px;
+	font-size: 20px;
 	text-align: center;
 	text-shadow: 4px 4px 0 rgba(0,0,0,0.1);
 	padding-top: 10px;
@@ -25,29 +25,27 @@
 /* We start writing out flexbox here. The above is just page setup */
 .container {
 	display: flex;
-	border: 10px solid goldenrod;	
 
+	justify-content: flex-start;     /* default, from left to right */
+	justify-content: flex-end;       /* from right to left */
+	justify-content: center;         /* align from center */
+
+/* horizontal layout (default) */
+	flex-direction: row;
+
+	/* wrapping horizontal evenly */
+	justify-content: space-between;  
+	justify-content: space-around;	
+
+/* vertical layout */
+	flex-direction: column;
+	min-height: 100vh;
+
+	justify-content: flex-start; /* to up */
+	justify-content: flex-end;   /* to down */
+	justify-content: center;     /* to enter */
+
+	border: 10px solid lightgrey;
 }
 
-.box {
-	flex: 1;  /* wrapping to whole container */
-}
-
-.box3 {
-	order: 0; /* default */
-	order: 1; /* displaying in the end of the row */
-}
-
-.box7 {
-	order: 2;
-}
-
-.box8 {
-	order: -1;
-}
-.box9 {
-	order: -2;
-}
-
-/* but selecting items by order */
 
