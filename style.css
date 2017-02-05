@@ -26,29 +26,23 @@
 .container {
 	display: flex;	
 	border: 10px solid lightgrey;
+	height: 100vh;
 
-	/*flex-direction: column;*/
+	/*justify-content: space-between;*/
+	align-content: space-between;
 
-/* vertically centered in the cintainer */
-	align-items: center;
-	min-height: 100vh;
+	flex-wrap: wrap;
 
-	align-items: stretch;    /* stretch to whole container */
-	align-items: flex-start; /* placed to up */
-	align-items: flex-end;   /* placed to down */
+	align-content: flex-start;
+	align-content: flex-end;
+	align-content: space-between;
+	align-content: space-around;
 
-	/* all boxes aligned by horizontally */
-	align-items: baseline;
-
-	/* all boxes aligned by vertically */
-	flex-direction: column;
-	align-items: center;
+	align-content: center;
+	justify-content: center; /* all boxes aligned by vertically (even 10) */
 }
 
-.box1 { font-size: 30px; } 
-.box3 { font-size: 150px; }
-.box4 { font-size: 200px; }
-.box5 { font-size: 10px; }
-.box6 { font-size: 77px; }
-
+.box {
+	width: 33.3333%;
+}
 
