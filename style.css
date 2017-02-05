@@ -4,7 +4,7 @@
 /* Some default styles to make each box visible */
 .box {
 	color: white;
-	font-size: 100px;
+	font-size: 35px;
 	text-align: center;
 	text-shadow: 4px 4px 0 rgba(0,0,0,0.1);
 	padding-top: 10px;
@@ -25,27 +25,17 @@
 /* We start writing out flexbox here. The above is just page setup */
 .container {
 	display: flex;	
-	border: 10px solid lightgrey;
-	height: 100vh;
-
-	align-items: flex-start;
 }
 
 .box {
-	width: 33.3333%;
+	flex: 1;  /* all boxes aligned proportionally into the container */
+}
+.box2 {
+	flex: 2;  /* added to the box double size of the width */
+}
+.box5 {
+	flex: 3;  /* added to the box three size of the width */
 }
 
-.box2 { 
-	padding-bottom: 200px; 
-}
-.box6 { 
-	padding-bottom: 0px; 
-}
-.box9 { 
-	padding-bottom: 50px;
-	align-self: flex-end;  /* placed to down of the container */
-	align-self: stretch;
-	align-self: center;
-}
 
 
