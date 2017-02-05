@@ -26,31 +26,32 @@
 /* We start writing out flexbox here. The above is just page setup */
 .container {
 	display: flex;	
+
+	flex-wrap: wrap;
+
+	flex-direction: row; /* default */
+	flex-direction: column;
+
+	border: 10px solid lightgrey;
+	/*min-height: 100vh;*/
+	height: 100vh;
 }
+
 .box {
-	/*flex: 1;*/
+/* for horizontal (flex-direction: row;) */
+	/*flex-basis: 500px;*/ 
 
-	/*flex-grow: 1;*/
-	/*flex-shrink: 1;*/
-}
-
-/* when screen is narrowing then boxes are take equal sizes */
-.box1 {
-	flex-basis: 400px;
-	flex-grow: 2;    /* grows size little bit */
-	flex-grow: 10;
-
-	flex-shrink: 10; /* box1 shrinks more than box2 */
-
-	/* short form */
-	flex: 10 5 400px; /* (flex: grow, shrink, basis;) */
-} 
-.box2 {
-	flex-basis: 400px;
+/* for vertical (flex-direction: column;) */
+	flex-basis: 250px;
 	flex-grow: 1;
-
-	flex-shrink: 1;
 }
+.box3 {
+	flex-grow: 10;
+}
+.box4 {
+	flex-basis: 100px;
+}
+
 
 
 
