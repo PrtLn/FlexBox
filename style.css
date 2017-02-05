@@ -4,7 +4,7 @@
 /* Some default styles to make each box visible */
 .box {
 	color: white;
-	font-size: 20px;
+	font-size: 100px;
 	text-align: center;
 	text-shadow: 4px 4px 0 rgba(0,0,0,0.1);
 	padding-top: 10px;
@@ -24,28 +24,31 @@
 
 /* We start writing out flexbox here. The above is just page setup */
 .container {
-	display: flex;
+	display: flex;	
+	border: 10px solid lightgrey;
 
-	justify-content: flex-start;     /* default, from left to right */
-	justify-content: flex-end;       /* from right to left */
-	justify-content: center;         /* align from center */
+	/*flex-direction: column;*/
 
-/* horizontal layout (default) */
-	flex-direction: row;
-
-	/* wrapping horizontal evenly */
-	justify-content: space-between;  
-	justify-content: space-around;	
-
-/* vertical layout */
-	flex-direction: column;
+/* vertically centered in the cintainer */
+	align-items: center;
 	min-height: 100vh;
 
-	justify-content: flex-start; /* to up */
-	justify-content: flex-end;   /* to down */
-	justify-content: center;     /* to enter */
+	align-items: stretch;    /* stretch to whole container */
+	align-items: flex-start; /* placed to up */
+	align-items: flex-end;   /* placed to down */
 
-	border: 10px solid lightgrey;
+	/* all boxes aligned by horizontally */
+	align-items: baseline;
+
+	/* all boxes aligned by vertically */
+	flex-direction: column;
+	align-items: center;
 }
+
+.box1 { font-size: 30px; } 
+.box3 { font-size: 150px; }
+.box4 { font-size: 200px; }
+.box5 { font-size: 10px; }
+.box6 { font-size: 77px; }
 
 
