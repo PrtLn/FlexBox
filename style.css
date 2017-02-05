@@ -4,10 +4,11 @@
 /* Some default styles to make each box visible */
 .box {
 	color: white;
-	font-size: 35px;
+	font-size: 50px;
 	text-align: center;
 	text-shadow: 4px 4px 0 rgba(0,0,0,0.1);
 	padding-top: 10px;
+	padding: 10px;
 }
 
 /* Colours for each box */
@@ -26,16 +27,31 @@
 .container {
 	display: flex;	
 }
-
 .box {
-	flex: 1;  /* all boxes aligned proportionally into the container */
+	/*flex: 1;*/
+
+	/*flex-grow: 1;*/
+	/*flex-shrink: 1;*/
 }
+
+/* when screen is narrowing then boxes are take equal sizes */
+.box1 {
+	flex-basis: 400px;
+	flex-grow: 2;    /* grows size little bit */
+	flex-grow: 10;
+
+	flex-shrink: 10; /* box1 shrinks more than box2 */
+
+	/* short form */
+	flex: 10 5 400px; /* (flex: grow, shrink, basis;) */
+} 
 .box2 {
-	flex: 2;  /* added to the box double size of the width */
+	flex-basis: 400px;
+	flex-grow: 1;
+
+	flex-shrink: 1;
 }
-.box5 {
-	flex: 3;  /* added to the box three size of the width */
-}
+
 
 
 
