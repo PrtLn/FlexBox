@@ -31,10 +31,36 @@ a:hover {
 	background: rgba(0,0,0,.3);
 }
 
+.toggleNav {
+	display: none;
+}
+
+img {
+	width: 100%;
+	border-radius: 5px;
+}
+
 .wrapper {
 	max-width: 1000px;
 	margin: 0 auto;
-	padding: 50px;
+}
+
+input {
+	padding: 8px;
+	border: 0;
+	border-radius: 3px;
+	text-align: center;
+	margin: 3px;
+}
+
+section, footer {
+	text-align: center;
+	font-size: .8em;
+	background: rgba(0,0,0,.2);
+	padding: 15px;
+	margin: 15px 0;
+	color: white;
+	font-weight: 100;
 }
 
 /* Flex Container */
@@ -47,6 +73,7 @@ a:hover {
 	display: flex;
 }
 
+/* Flex Item */
 .flex-nav li {
 	flex: 3;
 }
@@ -58,13 +85,6 @@ a:hover {
 @media all and (max-width: 1000px) {
 
 	.flex-nav ul {
-
-		/*flex-direction: row;*/ /* default */ 
-
-/* 1. vertical arrangement when shrinking */
-		/*flex-direction: column;*/
-
-/* 2. horizontal arrangement when shrinking (with '.flex-nav li' and  '.flex-nav .social')*/
 		flex-wrap: wrap;
 	}
 
@@ -80,7 +100,55 @@ a:hover {
 @media all and (max-width: 500px) {
 
 	.flex-nav li {
-		/*flex: 1 1 100%;*/
 		flex-basis: 100%;
+	}
+
+	/* Flex Container */
+	.wrapper {
+		display: flex;
+		flex-direction: column;
+	}
+
+	/* Flex Item */
+	.wrapper > * {
+		order: 9999;
+	}
+
+	.flex-nav {
+		order: 1;
+	}
+
+	.toggleNav {
+		display: block;
+	}
+
+	.flex-nav ul {
+		display: none;
+	}
+
+	.flex-nav ul.open {
+		display: flex;
+	}
+
+	.top {
+		order: 2;
+	}
+
+	.hero {
+		order: 3;
+	}
+
+	.details {
+		order: 4;
+	}
+
+	input {
+		display: flex;
+		flex-direction: column;
+		/*justify-content: center;*/
+		margin: 0 auto; 
+		margin-bottom: 7px; 
+
+		order: 5;
 	}
 }
